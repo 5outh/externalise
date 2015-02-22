@@ -15,7 +15,7 @@ externalise = function (fnName) {
             return obj[fnName];
         }
 
-        return obj[fnName].apply(this, args);
+        return obj[fnName].apply(obj, args);
     };
 };
 

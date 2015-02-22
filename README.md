@@ -44,3 +44,5 @@ externals.get(new Identity(10));
 externals.set(new Identity(10), 100);
 // #=> { value: 100 };
 ```
+
+Lastly, feel free to rename your import `externalize` if the spelling is wrong in your region. :)

@@ -8,6 +8,15 @@ describe('externalise', function () {
 
             length([1, 2, 3]).should.equal(3);
         });
+
+        it('should slice the array', function () {
+            var slice = externalise('slice');
+                sliced = slice([1, 2, 3], 1);
+
+            sliced.length.should.equal(2);
+            sliced[0].should.equal(2);
+            sliced[1].should.equal(3);
+        });
     });
 
     describe('#externalise.proto', function () {
