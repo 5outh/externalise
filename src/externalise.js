@@ -2,9 +2,11 @@ var externalise,
     externalisePrototype;
 
 /**
- * 
- * @param  {[type]} fnName [description]
- * @return {[type]}        [description]
+ * Turn a function on an object to a function accepting
+ * that object as a function.
+ *
+ * @param  {string} fnName
+ * @return {function}
  */
 externalise = function (fnName) {
     return function (obj) {
@@ -20,9 +22,10 @@ externalise = function (fnName) {
 };
 
 /**
- * 
- * @param  {[type]} obj [description]
- * @return {[type]}     [description]
+ * Externalise all functions on an object's prototype
+ *
+ * @param  {object} obj
+ * @return {*}
  */
 externalise.proto = function (obj) {
     var keys = Object.keys(obj.prototype),
