@@ -13,6 +13,7 @@
   "author": "Benjamin Kovach",
   "license": "MIT",
   "devDependencies": {
+    "lodash": "^3.3.0",
     "mocha": "^2.1.0",
     "should": "^5.0.1"
   }

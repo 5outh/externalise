@@ -1,4 +1,5 @@
-var externalise = require('../index.js');
+var _ = require('lodash'),
+    externalise = require('../index.js');
 
 describe('externalise', function () {
     describe('#externalise', function () {
@@ -36,6 +37,15 @@ describe('externalise', function () {
 
         it('should set the Identitys value', function () {
             externals.set(new Identity(10), 100).value.should.equal(100);
+        });
+    });
+
+    describe('third-party support', function () {
+        it('works with lodash', function () {
+            var lengths = _.map(["hello", "world!"], externalise('length'));
+            lengths.length.should.equal(2);
+            lengths[0].should.equal(5);
+            lengths[1].should.equal(6);
         });
     });
 });
