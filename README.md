@@ -7,7 +7,7 @@ For example:
 var externalise = require('externalise');
 var length = externalise('length');
 
-length([1, 2, 3]);
+length(['what', 'is', 'up?!']);
 // #=> 3
 ```
 
